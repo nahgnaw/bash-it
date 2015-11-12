@@ -17,7 +17,7 @@ function prompt_command() {
     #PS1="\n${purple}\h: ${reset_color} ${green}\w\n${bold_cyan}$(scm_char)${green}$(scm_prompt_info) ${green}→${reset_color} "
     #PS1="\n${cyan}\h: ${reset_color} ${yellow}\w\n${red}$(scm_char)${red}$(scm_prompt_info) ${green}→${reset_color} "
     #PS1="\n${cyan}\h: ${reset_color} ${yellow}\w ${green}$(scm_prompt_info)\n${reset_color}→ "
-    PS1="\n${cyan}\h: ${reset_color} ${yellow}\w \n${purple}$(python_version_prompt) ${green}$(scm_prompt_info)\n${reset_color}→ "
+    PS1="\n${cyan}\h: ${yellow}\w ${purple}$(python_version_prompt)${reset_color}\n→${green}$(scm_prompt_info)${reset_color} "
 }
 
 PROMPT_COMMAND=prompt_command;
