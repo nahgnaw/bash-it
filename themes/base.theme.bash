@@ -318,13 +318,13 @@ function ruby_version_prompt {
 function virtualenv_prompt {
   if [[ -n "$VIRTUAL_ENV" ]]; then
     virtualenv=`basename "$VIRTUAL_ENV"`
-    echo -e "$VIRTUALENV_THEME_PROMPT_PREFIX$virtualenv$VIRTUALENV_THEME_PROMPT_SUFFIX"
+    echo -e "$VIRTUALENV_THEME_PROMPT_PREFIX$virtualenv$VIRTUALENV_THEME_PROMPT_SUFFIX "
   fi
 }
 
 function condaenv_prompt {
   if [[ $CONDA_DEFAULT_ENV ]]; then
-    echo -e "${CONDAENV_THEME_PROMPT_PREFIX}${CONDA_DEFAULT_ENV}${CONDAENV_THEME_PROMPT_SUFFIX}"
+    echo -e "${CONDAENV_THEME_PROMPT_PREFIX}${CONDA_DEFAULT_ENV}${CONDAENV_THEME_PROMPT_SUFFIX} "
   fi
 }
 
@@ -334,7 +334,7 @@ function py_interp_prompt {
 }
 
 function python_version_prompt {
-  echo -e "$(virtualenv_prompt)$(condaenv_prompt)$(py_interp_prompt)"
+  echo -e "[$(virtualenv_prompt)$(condaenv_prompt)$(py_interp_prompt)]"
 }
 
 function git_user_info {
